@@ -15,10 +15,13 @@ setup_requires = [
 
 # required dependencies that this package is using.
 install_requires = [
-    'python3-saml>=1.8.0',
-    'python-slugify>=3.0.6',
-    'lxml>=3.5.0,<4.2.6',
-    # 'xmlsec>=1.3.3',
+    'Flask>=0.11.1',
+    'Flask-Login>=0.3.2',
+    'Flask-WTF>=0.13.1',
+    'oauthlib>=1.1.2,!=2.0.3,!=2.0.4,!=2.0.5,<3.0.0',
+    'python3-saml>=1.4.0',
+    'requests-oauthlib>=0.6.2,<1.2.0',
+    'uritools>=1.0.1',
 ]
 
 # to add external data for example .txt or .dat or any other. not a python code.
