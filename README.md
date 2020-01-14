@@ -1,5 +1,5 @@
-# Shibboleth Authenticator
-  Module for invenio-RDM that provides authentication via Shibboleth.
+# Invenio SAML
+  Module for invenio that provides authentication via Shibboleth.
   
 ## Installation
 
@@ -16,11 +16,11 @@ also add this script in your ```Dockerfile.base``` just after FROM inveniosoftwa
 RUN yum -y install libxml2-devel xmlsec1-devel xmlsec1-openssl-devel libtool-ltdl-devel
 ```
 
-### ShibbolethAuthenticator
+### invenio-SAML
 
-ShibbolethAuthenticator module can be installed as bellow:
+invenio-SAML module can be installed as bellow:
 
-Add this to your invenioRDM Pipfile
+Add this to your invenio Pipfile
 
 ```
 invenio-SAML = { git = 'https://github.com/mb-wali/invenio-SAML.git', editable = 'true' }
