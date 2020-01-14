@@ -3,8 +3,8 @@
 # Copyright (C) 2020 TUGRAZ.
 #
 
-"""Version information for ShibbolethAuthenticator
-This file is imported by ``ShibbolethAuthenticator.__init__``,
+"""Version information for Invenio SAML
+This file is imported by ``invenio_saml.__init__``,
 and parsed by ``setup.py``.
 """
 

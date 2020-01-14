@@ -3,7 +3,7 @@
 # Copyright (C) 2020 TUGRAZ.
 #
 
-"""Shibboleth authenticator extension."""
+"""Invenio SAML extension."""
 
 from __future__ import absolute_import, print_function
 
@@ -11,8 +11,7 @@ from . import config
 
 
 class InvenioSAML(object):
-
-    """Shibboleth authenticator extension."""
+    """Invenio SAML extension."""
 
     def __init__(self, app=None):
         if app:
