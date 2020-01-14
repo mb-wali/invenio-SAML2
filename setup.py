@@ -43,7 +43,7 @@ setup(
     description='Shibboleth Authenticator invenio',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/mb-wali/saml3.git',
+    url='https://github.com/mb-wali/invenio-SAML.git',
     license='MIT',
     author='TUGRAZ',
     author_email='mb_wali@hotmail.com',
