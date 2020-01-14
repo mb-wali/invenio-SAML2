@@ -58,13 +58,15 @@ Number of seconds after which the state token expires
 SHIBBOLETH_STATE_EXPIRES = 300
 ```
 
-```
-""" SERVICE_PROVIDER is your application in this case invenioRDM.
-""" strict """
-""" debug """
-"""entity_id 'this can be a unique URI that the IDENTITY_PROVIDERS knows which Service provider is asking for
-    identity' """
-    
+#### SERVICES_PROVIDER
+```SHIBBOLETH_SERVICES_PROVIDER``` Is your application/Service in this case invenio.
+- ```strict``` MUST be set as ```True```. Otherwise your environment is not secure and will be exposed to attacks.
+- ```debug``` set this ```True``` for debugging purposes.
+- ```entity_id``` is a unique self signed URI, with this the ```IDENTITY_PROVIDERS``` knows which ```SERVICES_PROVIDER``` is asking for identity.
+
+see example below:
+
+``` 
 SHIBBOLETH_SERVICE_PROVIDER = dict(
     strict=True,
     debug=True,
@@ -72,16 +74,21 @@ SHIBBOLETH_SERVICE_PROVIDER = dict(
 )
 ```
 
+#### IDENTITY_PROVIDERS
+```SHIBBOLETH_IDENTITY_PROVIDERS``` Is remote application which we redirect the user to login or to identify.
+- ```idp = dict()``` ```idp``` is your remote_app name, which has these below fields:
+  - ```entity_id``` is a unique URI from your ```IDENTITY_PROVIDERS```.
+  - ```title``` you can give a title for your ```idp``` [OPTIONAL]
+  - ```sso_url``` is the URL to redirect the user. URL for ```IDENTITY_PROVIDERS```.
+  - ```sso__Logout_url``` is the URL to redirect for logout.
+  - ```mappings=dict()``` is the fields/values that ```IDENTITY_PROVIDERS``` sends back after successful identity of user.
+    - ```email```
+    - ```full_name```
+    - ```user_unique_id```
+
+see example below:
 
 ```
-""" IDENTITY_PROVIDERS is remote application which we redirect the user to login """
-""" idp = dict() """ 'is name of your remote_app. this dictionary can have these values' 
-                 """ entity_id """ 
-                 """ title """ 
-                 """ sso_url """ 'is URL you get from your remote application to redirect the user'.
-                 """ mapping = dict() """ 'is the values or fields you get back from your remote application':
-                     see below for examples:
-                     
 SHIBBOLETH_IDENTITY_PROVIDERS = dict(
     idp=dict(
         entity_id='https://identityprovider/idp/shibboleth',  # name of invenio something to get to know
@@ -92,9 +99,6 @@ SHIBBOLETH_IDENTITY_PROVIDERS = dict(
             email='urn:oid:0.9.2342.19200300.100.1.3',
             full_name='urn:oid:2.5.4.3',
             user_unique_id='urn:oid:2.16.756.1.2.5.1.1.1',
-            .
-            .
-            .
         )
     )
 )
