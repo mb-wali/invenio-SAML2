@@ -30,7 +30,7 @@ packages = find_packages(exclude=['docs', 'tests*'])
 # Get the version string. Cannot be done with import!
 g = {}
 
-with open(os.path.join('invenio-saml', 'version.py'), 'rt') as fp:
+with open(os.path.join('invenio_saml', 'version.py'), 'rt') as fp:
     exec(fp.read(), g)
     version = g['__version__']
 
@@ -48,7 +48,7 @@ setup(
     author='TUGRAZ',
     author_email='mb_wali@hotmail.com',
     keywords='SSO SAML2',
-    # package_dir={'', 'invenio-saml'},
+    # package_dir={'', 'invenio_saml'},
 
     # packages=packages,
     # zip_safe=False,
@@ -56,13 +56,13 @@ setup(
     # platforms='any',
     entry_points={
         'invenio_base.apps': [
-            'invenio-saml = invenio-saml:InvenioSAML',
+            'invenio_saml = invenio_saml:InvenioSAML',
         ],
         'invenio_base.blueprints': [
-            'invenio-saml = invenio-saml.views.client:blueprint',
+            'invenio_saml = invenio_saml.views.client:blueprint',
         ],
         'invenio_config.module': [
-            'invenio-saml = invenio-saml.config',
+            'invenio_saml = invenio_saml.config',
         ],
     },
     # extras_require=extras_require,
