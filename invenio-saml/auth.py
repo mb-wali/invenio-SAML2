@@ -10,7 +10,6 @@ from onelogin.saml2.auth import OneLogin_Saml2_Auth
 
 
 def init_saml_auth(req, remote_app):
-
     """
     Init SAML authentication for remote application.
 
@@ -23,7 +22,6 @@ def init_saml_auth(req, remote_app):
     idp_config = get_identity_provider_configuration(remote_app)
     sp_config = current_app.config.get('SHIBBOLETH_SERVICE_PROVIDER')
     idp_crt = current_app.config.get('SHIBBOLETH_IDP_CERT')
-
 
     # Check configuration data
     if 'strict' not in sp_config:
@@ -49,8 +47,8 @@ def init_saml_auth(req, remote_app):
         private_key = content_file.read()
 
     with open(
-        idp_crt.format(
-            remote_app=remote_app), 'r') as content_file:
+            idp_crt.format(
+                remote_app=remote_app), 'r') as content_file:
         idp_cert = content_file.read()
 
     # Create auth object with settings below
@@ -68,7 +66,6 @@ def init_saml_auth(req, remote_app):
                     'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST'
             },
 
-
             "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
             'x509cert': x509cert,
             'privateKey': private_key
@@ -79,28 +76,28 @@ def init_saml_auth(req, remote_app):
                 'url': idp_config['sso_url'],
                 'binding': 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect'
             },
-                   "singleLogoutService": {
+            "singleLogoutService": {
 
-                   "url": idp_config['sso__Logout_url'],
-                    "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-                   },
+                "url": idp_config['sso__Logout_url'],
+                "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            },
             'x509cert': idp_cert
         },
 
-         "security": {
-        "nameIdEncrypted": False,
-        "authnRequestsSigned": False,
-        "logoutRequestSigned": False,
-        "logoutResponseSigned": False,
-        "signMetadata": False,
-        "wantMessagesSigned": True,
-        "wantAssertionsSigned": False,
-        "wantNameIdEncrypted": False,
-        "requestedAuthnContext": False
+        "security": {
+            "nameIdEncrypted": False,
+            "authnRequestsSigned": False,
+            "logoutRequestSigned": False,
+            "logoutResponseSigned": False,
+            "signMetadata": False,
+            "wantMessagesSigned": True,
+            "wantAssertionsSigned": False,
+            "wantNameIdEncrypted": False,
+            "requestedAuthnContext": False
+        }
     }
-    }
-    
-    print('SETTINGS: ',settings)
+
+    print('SETTINGS: ', settings)
     auth = OneLogin_Saml2_Auth(req, settings)
     return auth
 
@@ -112,7 +109,7 @@ def get_identity_provider_configuration(remote_app):
     :returns: (dict) A dictionary with the identity provider configuration.
     """
     if remote_app not in current_app.config.get(
-        'SHIBBOLETH_IDENTITY_PROVIDERS'):
+            'SHIBBOLETH_IDENTITY_PROVIDERS'):
         raise Exception(
             'Identity provider not found for "{remote_app}"'.format(
                 remote_app=remote_app))

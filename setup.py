@@ -30,7 +30,7 @@ packages = find_packages(exclude=['docs', 'tests*'])
 # Get the version string. Cannot be done with import!
 g = {}
 
-with open(os.path.join('shibboleth_Authenticator', 'version.py'), 'rt') as fp:
+with open(os.path.join('invenio-saml', 'version.py'), 'rt') as fp:
     exec(fp.read(), g)
     version = g['__version__']
 
@@ -38,9 +38,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='ShibbolethAuthenticator',
+    name='InvenioSAML',
     version=version,
-    description='ShibbolethAuthenticator invenio',
+    description='Shibboleth Authenticator invenio',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/mb-wali/saml3.git',
@@ -48,7 +48,7 @@ setup(
     author='TUGRAZ',
     author_email='mb_wali@hotmail.com',
     keywords='SSO SAML2',
-    # package_dir={'', 'shibboleth_Authenticator'},
+    # package_dir={'', 'invenio-saml'},
 
     # packages=packages,
     # zip_safe=False,
@@ -56,13 +56,13 @@ setup(
     # platforms='any',
     entry_points={
         'invenio_base.apps': [
-            'shibboleth_Authenticator = shibboleth_Authenticator:ShibbolethAuthenticator',
+            'invenio-saml = invenio-saml:InvenioSAML',
         ],
         'invenio_base.blueprints': [
-            'shibboleth_Authenticator = shibboleth_Authenticator.views.client:blueprint',
+            'invenio-saml = invenio-saml.views.client:blueprint',
         ],
         'invenio_config.module': [
-            'shibboleth_Authenticator = shibboleth_Authenticator.config',
+            'invenio-saml = invenio-saml.config',
         ],
     },
     # extras_require=extras_require,
