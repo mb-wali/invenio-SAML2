@@ -43,6 +43,7 @@ SHIBBOLETH_IDENTITY_PROVIDERS = dict(
         entity_id='https://identityprovider/idp/shibboleth',  # name of invenio something to get to know
         title='RDM remote application',
         sso_url='https://identityprovider/idp/profile/SAML2/Redirect/SSO',  # redirects to for authentication
+        sso__Logout_url='https://sso.idp.com/slo/Logout', # Logout url
         mappings=dict(
             email='urn:oid:0.9.2342.19200300.100.1.3',
             full_name='urn:oid:2.5.4.3',
