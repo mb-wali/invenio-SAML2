@@ -24,10 +24,6 @@ install_requires = [
     'uritools>=1.0.1',
 ]
 
-# to add external data for example .txt or .dat or any other. not a python code.
-# package_data = {
-# }
-
 packages = find_packages(exclude=['docs', 'tests*'])
 
 # Get the version string. Cannot be done with import!
@@ -51,12 +47,6 @@ setup(
     author='TUGRAZ',
     author_email='mb_wali@hotmail.com',
     keywords='SSO SAML2',
-    # package_dir={'', 'invenio_saml'},
-
-    # packages=packages,
-    # zip_safe=False,
-    # include_package_data=True,
-    # platforms='any',
     entry_points={
         'invenio_base.apps': [
             'invenio_saml = invenio_saml:InvenioSAML',
