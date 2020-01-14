@@ -23,7 +23,7 @@ ShibbolethAuthenticator module can be installed as bellow:
 Add this to your invenioRDM Pipfile
 
 ```
-ShibbolethAuthenticator = { git = 'https://github.com/mb-wali/invenio-SAML.git', editable = 'true' }
+invenio-SAML = { git = 'https://github.com/mb-wali/invenio-SAML.git', editable = 'true' }
 ```
 
 ## Run
