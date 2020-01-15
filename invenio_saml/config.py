@@ -75,21 +75,3 @@ SHIBBOLETH_IDENTITY_PROVIDERS = dict(
     )
 
 """
-
-# SHIBBOLETH_SERVICE_PROVIDER_CERTIFICATE = ''
-"""Path to certificate."""
-
-# SHIBBOLETH_SERVICE_PROVIDER_PRIVATE_KEY = ''
-"""Path to certificate private key."""
-
-# SHIBBOLETH_IDP_CERT = ''
-"""Path to idp.crt"""
-
-SHIBBOLETH_STATE_EXPIRES = 300
-"""Number of seconds after which the state token expires."""
-
-# SHIBBOLETH_SERVICE_PROVIDER = {}
-"""Configuration of service provider."""
-
-# SHIBBOLETH_IDENTITY_PROVIDERS = {}
-"""Configuration of identity providers."""
