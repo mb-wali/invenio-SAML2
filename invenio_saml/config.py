@@ -4,7 +4,7 @@
 #
 # more details.
 
-"""configuration.
+""" Invenio-SAML configuration.
 
 .. Path to sp.crt (X.509 cert) Public cert for SERVICE_PROVIDER
 SHIBBOLETH_SERVICE_PROVIDER_CERTIFICATE = './saml/sp.crt'
@@ -60,6 +60,19 @@ SHIBBOLETH_IDENTITY_PROVIDERS = dict(
         )
     )
 )
+
+.. PS: SHIBBOLETH_IDENTITY_PROVIDERS can have more than one <remote_app>.
+
+.. EXAMPLE
+
+    SHIBBOLETH_IDENTITY_PROVIDERS = dict(
+        idp1=dict(
+            # Configuration values for idp1
+        ),
+        idp2=dict(
+            # Configuration values for idp2
+        )
+    )
 
 """
 
