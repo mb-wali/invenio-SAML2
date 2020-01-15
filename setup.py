@@ -66,12 +66,12 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'License :: GNU GENERAL PUBLIC LICENSE',
+        "License :: OSI Approved :: MIT License",
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        # 'Development Status :: 5 - Production/Stable',
+        'Development Status :: 5 - Production/Stable',
     ],
     python_requires='>=3.6',
 
