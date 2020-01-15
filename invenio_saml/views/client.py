@@ -162,5 +162,4 @@ def metadata(remote_app):
         resp.headers['Content-Type'] = 'text/xml'
     else:
         resp = make_response(', '.join(errors), 500)
-    print(resp)
     return resp

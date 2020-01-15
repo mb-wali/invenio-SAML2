@@ -97,7 +97,6 @@ def init_saml_auth(req, remote_app):
         }
     }
 
-    print('SETTINGS: ', settings)
     auth = OneLogin_Saml2_Auth(req, settings)
     return auth
 
