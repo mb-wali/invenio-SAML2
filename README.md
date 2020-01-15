@@ -18,18 +18,18 @@ RUN yum -y install libxml2-devel xmlsec1-devel xmlsec1-openssl-devel libtool-ltd
 
 ### invenio-SAML
 
-invenio-SAML module can be installed as bellow:
-
-Add this to your invenio Pipfile
+invenio-SAML module can be installed via PyPI:
 
 ```
-invenio-SAML = { git = 'https://github.com/mb-wali/invenio-SAML.git', editable = 'true' }
+pip install invenio-saml
 ```
 
-## Run
+or the latest development branch directly from GitHub:
+
 ```
-pipenv install
+pip install git+git://github.com/mb-wali/invenio-SAML@master
 ```
+
 ---
 
 ## Configuration
@@ -37,7 +37,6 @@ pipenv install
 ### config.py
 
 [Generate](https://www.samltool.com/self_signed_certs.php) self signed ```sp.crt``` and ```sp.key```. 
-
 
 Path to ```sp.crt``` (X.509 cert) Public cert for ```SERVICE_PROVIDER```. 
 ```
