@@ -36,19 +36,20 @@ pipenv install
 
 ### config.py
 
-Visit <https://www.samltool.com/self_signed_certs.php> to generate self signed ```sp.crt``` and ```sp.key```.
+[Generate](https://www.samltool.com/self_signed_certs.php) self signed ```sp.crt``` and ```sp.key```. 
 
-sp.crt (X.509 cert) The public cert of the SP. 
+
+Path to ```sp.crt``` (X.509 cert) The public cert of the ```SERVICE_PROVIDER```. 
 ```
 SHIBBOLETH_SERVICE_PROVIDER_CERTIFICATE = './docker/shibbolethAuthenticator/sp.crt'
 ```
 
-sp.key (Private key) The private key of the SP (Service Provider)
+Path to ```sp.key``` (Private key) The private key of the ```SERVICE_PROVIDER```.
 ```
 SHIBBOLETH_SERVICE_PROVIDER_PRIVATE_KEY = './docker/shibbolethAuthenticator/sp.key'
 ```
 
-idp.crt The public cert of the IDP (Identity Provider)
+Path to ```idp.crt``` The public cert of the IDP ```IDENTITY_PROVIDER```.
 ```
 SHIBBOLETH_IDP_CERT = './docker/shibbolethAuthenticator/idp.crt'
 ```
