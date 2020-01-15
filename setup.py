@@ -38,7 +38,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='InvenioSAML',
+    name='invenio-saml',
     version=version,
     description='Shibboleth Authenticator invenio',
     long_description=long_description,

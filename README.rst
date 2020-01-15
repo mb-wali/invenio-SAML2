@@ -27,5 +27,4 @@ Invenio module that provides SAML integration.
 
 TODO: Please provide feature overview of module
 
-Further documentation is available on
-https://invenio-saml.readthedocs.io/
+
