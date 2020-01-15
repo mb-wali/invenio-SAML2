@@ -22,6 +22,7 @@ install_requires = [
     'python3-saml>=1.4.0',
     'requests-oauthlib>=0.6.2,<1.2.0',
     'uritools>=1.0.1',
+    'python-slugify>=4.0.0',
 ]
 
 packages = find_packages(exclude=['docs', 'tests*'])
