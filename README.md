@@ -107,7 +107,7 @@ SHIBBOLETH_IDENTITY_PROVIDERS = dict(
 ---
 
 ## Blueprints
-After successfull installation and configurtion.
+After successful installation and configurtion.
 you will be able to navigate to these endpoints.
 
 * Metadata
