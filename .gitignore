@@ -1,3 +1,6 @@
 # comment  : more on gitignore: https://git-scm.com/docs/gitignore
 __pycache__/
 .idea/
+/dokr.egg-info/
+/dist/
+build/
