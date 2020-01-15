@@ -85,7 +85,7 @@ SHIBBOLETH_IDENTITY_PROVIDERS = dict(
 # SHIBBOLETH_IDP_CERT = ''
 """Path to idp.crt"""
 
-# SHIBBOLETH_STATE_EXPIRES = 300
+SHIBBOLETH_STATE_EXPIRES = 300
 """Number of seconds after which the state token expires."""
 
 # SHIBBOLETH_SERVICE_PROVIDER = {}
