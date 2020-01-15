@@ -25,7 +25,7 @@ install_requires = [
     'python-slugify>=4.0.0',
 ]
 
-packages = find_packages(exclude=['docs', 'tests*'])
+packages = find_packages()
 
 # Get the version string. Cannot be done with import!
 g = {}
@@ -38,16 +38,15 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='InvenioSAML',
+    name='invenio-SAML',
     version=version,
-    description='Shibboleth Authenticator invenio',
+    description='Module for invenio that provides authentication via Shibboleth.',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/mb-wali/invenio-SAML.git',
+    url='https://github.com/mb-wali/invenio-SAML',
     license='MIT',
     author='TUGRAZ',
     author_email='mb_wali@hotmail.com',
-    keywords='SSO SAML2',
     entry_points={
         'invenio_base.apps': [
             'invenio_saml = invenio_saml:InvenioSAML',
