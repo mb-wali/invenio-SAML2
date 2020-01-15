@@ -39,25 +39,25 @@ pipenv install
 [Generate](https://www.samltool.com/self_signed_certs.php) self signed ```sp.crt``` and ```sp.key```. 
 
 
-Path to ```sp.crt``` (X.509 cert) Public cert for ```SERVICE_PROVIDER```. 
-```
-SHIBBOLETH_SERVICE_PROVIDER_CERTIFICATE = './docker/shibbolethAuthenticator/sp.crt'
-```
+- Path to ```sp.crt``` (X.509 cert) Public cert for ```SERVICE_PROVIDER```. 
+  ```
+  SHIBBOLETH_SERVICE_PROVIDER_CERTIFICATE = './docker/shibbolethAuthenticator/sp.crt'
+  ```
 
-Path to ```sp.key``` (Private key) Private key for ```SERVICE_PROVIDER```.
-```
-SHIBBOLETH_SERVICE_PROVIDER_PRIVATE_KEY = './docker/shibbolethAuthenticator/sp.key'
-```
+- Path to ```sp.key``` (Private key) Private key for ```SERVICE_PROVIDER```.
+  ```
+  SHIBBOLETH_SERVICE_PROVIDER_PRIVATE_KEY = './docker/shibbolethAuthenticator/sp.key'
+  ```
 
-Path to ```idp.crt``` Public cert for IDP ```IDENTITY_PROVIDER```.
-```
-SHIBBOLETH_IDP_CERT = './docker/shibbolethAuthenticator/idp.crt'
-```
+- Path to ```idp.crt``` Public cert for IDP ```IDENTITY_PROVIDER```.
+  ```
+  SHIBBOLETH_IDP_CERT = './docker/shibbolethAuthenticator/idp.crt'
+  ```
 
-Number of seconds after which the state token expires
-```
-SHIBBOLETH_STATE_EXPIRES = 300
-```
+- Number of seconds after which the state token expires
+  ```
+  SHIBBOLETH_STATE_EXPIRES = 300
+  ```
 
 #### SERVICES_PROVIDER
 ```SHIBBOLETH_SERVICES_PROVIDER``` Is your application/Service in this case invenio.
