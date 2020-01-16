@@ -47,6 +47,7 @@ setup(
     license='MIT',
     author='TUGRAZ',
     author_email='mb_wali@hotmail.com',
+    download_url='https://github.com/mb-wali/invenio-SAML/archive/0.0.1.tar.gz',
     entry_points={
         'invenio_base.apps': [
             'invenio_saml = invenio_saml:InvenioSAML',
