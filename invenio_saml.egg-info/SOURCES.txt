@@ -1,9 +1,0 @@
-README.rst
-setup.cfg
-setup.py
-invenio_saml.egg-info/PKG-INFO
-invenio_saml.egg-info/SOURCES.txt
-invenio_saml.egg-info/dependency_links.txt
-invenio_saml.egg-info/entry_points.txt
-invenio_saml.egg-info/requires.txt
-invenio_saml.egg-info/top_level.txt
